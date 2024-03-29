@@ -22,3 +22,7 @@ resource "aws_elasticache_subnet_group" "subnet_group" {
     { Name = "${var.env}-subnet-group"}
   )
 }
+
+output "redis" {
+  value = aws_elasticache_cluster.elasticache
+}
